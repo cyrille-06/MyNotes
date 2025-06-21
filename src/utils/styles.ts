@@ -1,48 +1,42 @@
-import styled from "styled-components/native"; // Importation de styled-components pour gérer les styles en React Native
+import styled from "styled-components/native";
 
-// Définition des couleurs utilisées pour les notes
 export const colors = {
-  important: "#7EE4EC", // Couleur associée aux notes importantes
-  normal: "#FFD4CA", // Couleur pour les notes normales
-  reminder: "#114B5F", // Couleur pour les rappels
+  important: "#7EE4EC",
+  normal: "#FFD4CA",
+  reminder: "#114B5F",
 };
 
-// Composant stylé pour le titre d'une note
 export const Title = styled.Text`
-  font-family: "Montserrat"; // Utilisation de la police Montserrat
-  font-size: 22px; // Taille du texte
-  font-weight: bold; // Texte en gras
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-weight: bold;
 `;
 
-// Conteneur pour organiser les boutons (modifier, supprimer)
 export const ButtonContainer = styled.View`
-  flex-direction: row; // Affichage en ligne des boutons
-  justify-content: space-between; // Espacement entre les boutons
-  margin-top: 10px; // Ajout d'une marge au-dessus des boutons
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
 `;
 
-// Style générique pour un bouton (base pour supprimer et modifier)
 export const ButtonStyled = styled.TouchableOpacity`
-  flex: 1; // Chaque bouton prend une partie égale de l'espace disponible
-  padding: 10px; // Espacement interne
-  margin: 5px; // Espacement entre les boutons
-  border-radius: 8px; // Bords arrondis
-  align-items: center; // Centre le texte dans le bouton
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  align-items: center;
 `;
 
-// Bouton pour supprimer une note (hérite de ButtonStyled)
 export const DeleteButton = styled(ButtonStyled)`
-  background-color: ${colors.important}; // Couleur associée aux notes importantes
+  background-color: ${colors.important};
 `;
 
-// Bouton pour modifier une note (hérite de ButtonStyled)
 export const EditButton = styled(ButtonStyled)`
-  background-color: ${colors.normal}; // Couleur associée aux notes normales
+  background-color: ${colors.normal};
 `;
 
-// Style du texte à l'intérieur des boutons
 export const ButtonText = styled.Text`
-  color: white; // Texte en blanc
-  font-weight: bold; // Texte en gras
-  font-size: 16px; // Taille du texte
+  font-family: "Montserrat";  
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
 `;

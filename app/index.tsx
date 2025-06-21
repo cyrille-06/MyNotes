@@ -19,6 +19,11 @@ export default function Dashboard() {
 
   return (
     <View style={{ padding: 20, flex: 1 }}>
+      {/* Header "My Notes" */}
+      <Text style={{ fontSize: 24, fontWeight: "bold", textAlign: "center", marginBottom: 20 }}>
+        My Notes
+      </Text>
+
       {/* Affichage d'un message si aucune note n'est disponible */}
       {notes.length === 0 ? (
         <Text style={{ textAlign: "center", fontSize: 18, marginTop: 20 }}>
@@ -37,6 +42,7 @@ export default function Dashboard() {
           )}
         />
       )}
+      
       {/* Bouton permettant d'ajouter une nouvelle note */}
       <Button title="Add Note" onPress={() => router.push("/form")} />
     </View>
